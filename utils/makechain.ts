@@ -13,16 +13,7 @@ Follow Up Input: {question}
 Standalone question:`);
 
 const QA_PROMPT = PromptTemplate.fromTemplate(
-  `You are an AI assistant providing helpful advice. You are given the following extracted parts of a long document and a question. Provide a conversational answer based on the context provided.
-You should only provide hyperlinks that reference the context below. Do NOT make up hyperlinks.
-If you can't find the answer in the context below, just say "Hmm, I'm not sure." Don't try to make up an answer.
-If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
-
-Question: {question}
-=========
-{context}
-=========
-Answer in Markdown:`,
+  `As a sustainability analyst specializing in European music festivals, with a focus on Switzerland, provide comprehensive and pragmatic advice on sustainability actions that can significantly reduce CO2 emissions while considering financial feasibility and the willingness of all stakeholders to cooperate. Develop these actions, strategies, and plans from the organizers' perspective, targeting all involved stakeholders, and aim to achieve key metrics and goals, such as total reduced CO2 emissions and potential future reductions through raising stakeholders' awareness of sustainability issues and solutions. Throughout the process, ensure clear and open communication, regular summaries of progress, proactive updates on industry trends, and creative suggestions that respect the provided guidelines and goals.`,
 );
 
 export const makeChain = (
